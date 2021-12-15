@@ -1,7 +1,3 @@
-// Variables
-
-// End of Variables
-
 var today = moment().format("dddd, MMMM Do YYYY");
 $("#currentDay").text(today);
 
@@ -39,14 +35,14 @@ function timeTracker() {
 }
 
 // Getting items from local storage
-$("#hour-9am .description").val(localStorage.getItem("hour-9am"));
-$("#hour-10am .description").val(localStorage.getItem("hour-10am"));
-$("#hour-11am .description").val(localStorage.getItem("hour-11am"));
-$("#hour-12pm .description").val(localStorage.getItem("hour-12pm"));
-$("#hour-1pm .description").val(localStorage.getItem("hour-1pm"));
-$("#hour-2pm .description").val(localStorage.getItem("hour-2pm"));
-$("#hour-3pm .description").val(localStorage.getItem("hour-3pm"));
-$("#hour-4pm .description").val(localStorage.getItem("hour-4pm"));
-$("#hour-5pm .description").val(localStorage.getItem("hour-5pm"));
+$("#hour9 .description").val(localStorage.getItem("hour9"));
+$("#hour10 .description").val(localStorage.getItem("hour10"));
+$("#hour11 .description").val(localStorage.getItem("hour11"));
+$("#hour12 .description").val(localStorage.getItem("hour12"));
+$("#hour13 .description").val(localStorage.getItem("hour13"));
+$("#hour14 .description").val(localStorage.getItem("hour14"));
+$("#hour15 .description").val(localStorage.getItem("hour15"));
+$("#hour16 .description").val(localStorage.getItem("hour16"));
+$("#hour17 .description").val(localStorage.getItem("hour17"));
 
 timeTracker();
