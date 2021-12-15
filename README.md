@@ -1,89 +1,44 @@
 # 05 Third-Party APIs: Work Day Scheduler
 
-## Your Task
+## Criteria
 
 Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+## Description HTML
 
-## User Story
+This calendar uses Bootsrap and Moment.js linked at the top and bottom respectively.
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+I created one div called "container" to contain all of my hour blocks.
 
-## Acceptance Criteria
+Each hour block is a div labeled according to each hour of the workday (9am-5pm).
 
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+Below that is a div that displays what hour the section is for to the right of the text area.
 
-The following animation demonstrates the application functionality:
-
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+Each hour has a text area where the user can input their hourly tasks and a save button.
 
 
-## Grading Requirements
+## Description CSS
 
-This homework is graded based on the following criteria: 
+For this assignment, we were given a complete CSS stlyesheet.
 
-### Technical Acceptance Criteria: 40%
+## Description JS
 
-* Satisfies all of the above acceptance criteria plus the following:
+At the top of the JS I started by useing moment() to display the date and time at the top of my page.
 
-  * Uses a date utility library to work with date and time
+I then created a function that stores what the user inputs into the text area when they click the save button.
 
-### Deployment: 32%
+I then created a timeTracker function that tracks the time and changes the color of the time blocks in the HTML with CSS styling that was given to us.
 
-* Application deployed at live URL
+I accomplished this by creating a variable called blockTime and timeNow. timeNow is set to the current time in hours. blockTime changes the time-block HTML element's styling.
 
-* Application loads with no errors
+I created an if, else if , else statement using jquery.
 
-* Application GitHub URL submitted
+If blockTime is less than timeNow (what time it currently is), it will change the HTML class to past, and use the styling from the #past in the given CSS - it will also remove the other two classes (present and future). I did this for past, present and future.
 
-* GitHub repo contains application code
+I then had to get the items from local storage so that the text area would populate on refresh. I had to do this for all 9 hour blocks.
 
-### Application Quality: 15%
+The last line is calling the function timeTracker that I defined above. I missed this part and it wasted almost two hours of my time. always make sure to call your functions before flipping out and rewriting code 100 times.
 
-* Application user experience is intuitive and easy to navigate
+## Links
 
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the homework instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+## Images
