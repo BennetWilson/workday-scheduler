@@ -21,6 +21,8 @@ Each hour has a text area where the user can input their hourly tasks and a save
 
 For this assignment, we were given a complete CSS stlyesheet.
 
+I added a media query at the end to adjust the size of the buttons so that they would show up on phone displays.
+
 ## Description JS
 
 At the top of the JS I started by useing moment() to display the date and time at the top of my page.
