@@ -1,6 +1,9 @@
-var today = moment().format("MMM DD, YYYY [at] hh:mm a");
-$("#currentDay").text(today);
+var timeDisplayEl = $("#currentDay");
 
+function displayTime() {
+var today = moment().format('[Today is ] MMM DD, YYYY [at] hh:mm:ss a');
+timeDisplayEl.text(today);
+}
 $(document).ready(function () {
   $(".saveBtn").on("click", function () {
     var text = $(this).siblings(".description").val();
@@ -46,3 +49,4 @@ $("#hour16 .description").val(localStorage.getItem("hour16"));
 $("#hour17 .description").val(localStorage.getItem("hour17"));
 
 timeTracker();
+setInterval(displayTime, 1000);
