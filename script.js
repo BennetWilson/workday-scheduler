@@ -1,4 +1,4 @@
-var today = moment().format("dddd, MMMM Do YYYY");
+var today = moment().format("MMM DD, YYYY [at] hh:mm a");
 $("#currentDay").text(today);
 
 $(document).ready(function () {
